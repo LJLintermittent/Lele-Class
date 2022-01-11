@@ -43,7 +43,8 @@ public class VodController {
     @DeleteMapping("removeVideo/{id}")
     public R removeVideo(@PathVariable String id) {
         try {
-            DefaultAcsClient client = InitVodClient.initVodClient(ConstantVodUtils.ACCESS_KEY_ID, ConstantVodUtils.ACCESS_KEY_SECRET);
+            DefaultAcsClient client = InitVodClient.initVodClient(ConstantVodUtils.ACCESS_KEY_ID,
+                    ConstantVodUtils.ACCESS_KEY_SECRET);
             DeleteVideoRequest request = new DeleteVideoRequest();
             request.setVideoIds(id);
             client.getAcsResponse(request);
@@ -63,7 +64,8 @@ public class VodController {
     @GetMapping("getPlayAuth/{id}")
     public R getPlayAuth(@PathVariable String id) {
         try {
-            DefaultAcsClient client = InitVodClient.initVodClient(ConstantVodUtils.ACCESS_KEY_ID, ConstantVodUtils.ACCESS_KEY_SECRET);
+            DefaultAcsClient client = InitVodClient.initVodClient(ConstantVodUtils.ACCESS_KEY_ID,
+                    ConstantVodUtils.ACCESS_KEY_SECRET);
             GetVideoPlayAuthRequest request = new GetVideoPlayAuthRequest();
             request.setVideoId(id);
             GetVideoPlayAuthResponse response = client.getAcsResponse(request);

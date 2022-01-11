@@ -43,9 +43,9 @@ public class EduVideoController {
         String videoSourceId = video.getVideoSourceId();
         if (!StringUtils.isEmpty(videoSourceId)) {
             R result = vodClient.removeVideo(videoSourceId);
-            if (result.getCode() == 20001) {
-                throw new GuLiException(20001, "删除小节失败，熔断器启动");
-            }
+//            if (result.getCode() == 20001) {
+//                throw new GuLiException(20001, "删除小节失败，熔断器启动");
+//            }
         }
         eduVideoService.removeById(videoId);
         return R.ok();

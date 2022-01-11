@@ -12,6 +12,7 @@ import com.aliyuncs.profile.DefaultProfile;
  * @author 李佳乐
  * @version 1.0
  */
+@SuppressWarnings("all")
 public class InitVodClient {
 
     public static DefaultAcsClient initVodClient(String accessKeyId, String accessKeySecret) throws ClientException {
