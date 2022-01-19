@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initialscale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+ <div id="app">
+
+    <h1 :title="message">
+       {{content}} 
+    </h1>
+
+    <Input type="text" v-bind:value="key.value"></Input>
+    <Input v-model="key.value"></Input>
+
+    <p>
+        {{key.value}}
+    </p>
+
+    <button v-on:click="tuixue()">退学</button>
+
+ </div>
+ <script src="vue.min.js"></script>
+ <script>
+    new Vue({
+    el: '#app',
+    data: {
+        content: "xxxx",
+        message: "当前时间:" + new Date().toLocaleString(),
+        key: {
+           value: '李佳乐' 
+        }
+    },
+    methods: {
+        tuixue() {
+            alert('您已被退学!')
+        }
+    }
+    })
+ </script>
+</body>
+
+</html>
